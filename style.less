@@ -7,7 +7,8 @@
 @black-color: #262526;
 @light-color: #f3f3f3;
 @grey-color: #d7d8da;
-@font: 'Montserrat',
+@font: "Montserrat",
+"Arial",
 sans-serif;
 
 html {
@@ -23,16 +24,17 @@ body {
     max-width: 90vw;
     text-align: right;
     margin-top: 20px;
-    
+
     a {
         text-decoration: none;
         font-size: 14px;
         color: @black-color;
-        padding: 3px 10px;
+        padding: 8px 10px;
     }
-    
+
     .active {
         background-color: @light-color;
+        border-radius: 50%;
     }
 }
 
@@ -73,7 +75,6 @@ header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-
     }
 
     li:not(first-child) {
@@ -109,12 +110,20 @@ header {
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
         }
-        
-         .active {
-            font-weight: bold;
+
+        .active:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -3px;
+            left: 0;
+            z-index: 1;
+            background-color: @black-color;
+
         }
-       
-    } 
+
+    }
 }
 
 main {
@@ -149,17 +158,17 @@ main {
             a {
                 text-decoration: none;
                 color: @black-color;
+                font-size: 1.1rem;
             }
         }
     }
 }
 
 footer {
-    background: @light-color;
-    border-top: 1px solid @grey-color;
+
     height: 100px;
     margin-top: 70px;
-    
+
     .wrapper {
         max-width: 90vw;
         margin: 0 auto;
@@ -167,5 +176,35 @@ footer {
         flex-direction: row;
         align-items: center;
         height: 100px;
+        padding: 30px 60px;
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 32px;
+            height: auto;
+        }
+
+        img:not(first-child) {
+            margin-left: 15px;
+        }
     }
+
+    // HOVER ICONS
+    
+    a {
+        -webkit-transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    .icons:hover > a {
+        opacity: 0.5;
+    }
+
+    .icons:hover > a:hover {
+        opacity: 1.0;
+    }
+
 }
