@@ -27,21 +27,21 @@ body {
 
     a {
         text-decoration: none;
-        font-size: 14px;
+        font-size: 12px;
         color: @black-color;
         padding: 8px 10px;
+        -webkit-transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
     }
 
-    .active {
-        background-color: @light-color;
-        border-radius: 50%;
-    }
+
 }
 
 header {
     max-width: 90vw;
     margin: 0 auto;
     margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     align-items: baseline;
     flex-direction: row;
@@ -139,7 +139,7 @@ main {
 
     figure {
 
-        margin-top: 50px;
+        margin-bottom: 50px;
 
 
         img {
@@ -162,13 +162,70 @@ main {
             }
         }
     }
-    
+
     .hero {
         width: 90%;
         height: auto;
-        margin-top: 30px;
+    }
+
+    .about-content {
+        max-width: 90%;
+
+        p {
+            width: 45%;
+            line-height: 1.7em;
+            font-size: 1rem;
+            letter-spacing: .05em;
+        }
+
+        img {
+            float: right;
+            margin: 0 0 20px 20px;
+        }
     }
 }
+
+// FORM
+.container {
+    background-color: @light-color;
+    padding: 20px;
+
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid @grey-color;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        font-family: @font;
+        font-size: 1rem;
+    }
+
+    input[type=submit] {
+        background-color: @black-color;
+        color: @light-color;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        font-family: @font;
+        font-size: 1rem;
+        -webkit-transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+        background-color: @grey-color;
+        color: @black-color;
+    }
+
+
+}
+
+
 
 footer {
 
@@ -196,10 +253,7 @@ footer {
         img:not(first-child) {
             margin-left: 15px;
         }
-    }
-
-    // HOVER ICONS
-    
+    } // HOVER ICONS
     a {
         -webkit-transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
         transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
