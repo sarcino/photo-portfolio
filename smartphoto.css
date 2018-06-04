@@ -78,7 +78,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: black;
+  background-color: #ffffff;
   opacity: 1;
   font-family: sans-serif;
   cursor: pointer;
@@ -103,7 +103,7 @@
 
 .smartphoto-count {
   display: inline-block;
-  color: #FFF;
+  color: #000000;
   font-size: 16px;
 }
 
@@ -117,7 +117,7 @@
   width: 100%;
   height: 50px;
   padding: 15px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
 }
 
 .smartphoto-content {
@@ -363,7 +363,7 @@
   width: 100%;
   height: 50px;
   padding: 0 50px;
-  color: #FFF;
+  color: #ffffff;
   font-size: 12px;
   text-align: center;
   line-height: 50px;
