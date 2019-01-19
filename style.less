@@ -21,7 +21,8 @@ body {
 }
 
 .language {
-    max-width: 90vw;
+    max-width: 1100px;
+    margin: 0 auto;
     text-align: right;
     margin-top: 20px;
 
@@ -32,11 +33,15 @@ body {
         padding: 8px 10px;
         -webkit-transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
         transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        &:hover {
+            background-color: @grey-color;
+        }
     }
 }
 
 header {
-    width: 1107px;
+    max-width: 1100px;
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -116,8 +121,7 @@ header {
 
 
 main {
-    width: 1107px;
-
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -141,7 +145,6 @@ main {
     figure {
         margin: 0;
         margin-bottom: 50px;
-
 
         img {
             width: 500px;
@@ -178,7 +181,7 @@ main {
     }
 
     figure:hover {
-        
+
         figcaption a:after {
             transform: scaleX(1);
         }
@@ -189,34 +192,39 @@ main {
     }
 
     .hero {
-        width: 1107px;
+        width: 100%;
+        max-width:100%;
         height: auto;
     }
 
     .about-content {
         width: 1107px;
 
+
         p {
-            width: 45%;
+            width: 45rem;
             line-height: 1.7em;
             font-size: 1rem;
             letter-spacing: .05em;
+            margin-top: 0;
         }
 
         img {
             float: right;
             margin: 0 0 20px 20px;
+            width: 500px;
+            height: auto;
         }
     }
 
     .kontakt {
-        width: 1107px;
+        width: 1100px;
         text-align: center;
         margin-bottom: 30px;
     }
 
     .gallery {
-        width: 1107px;
+        width: 1100px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
@@ -280,13 +288,13 @@ footer {
     margin-top: 70px;
 
     .wrapper {
-        max-width: 90vw;
+        width: 1100px;
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         align-items: center;
         height: 100px;
-        padding: 30px 60px;
+
 
         a {
             text-decoration: none;
@@ -295,11 +303,9 @@ footer {
         img {
             width: 20px;
             height: auto;
-
-            &:not(first-child) {
-                margin-left: 15px;
-            }
+            margin-right: 15px;
         }
+
     }
 
     // HOVER ICONS
@@ -315,5 +321,12 @@ footer {
     .icons:hover > a:hover {
         opacity: 1.0;
     }
+
+}
+
+
+@media (max-width: 1100px) {
+
+    .hero {}
 
 }
